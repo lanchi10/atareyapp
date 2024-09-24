@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יישומי לנצ'י - הצגת יכולות</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+        body { font-family: 'Heebo', sans-serif; }
+        .app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+        .app-item { transition: all 0.3s ease; }
+        .app-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .app-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen" x-data="{ filter: 'all', apps: [
+    { name: 'פודקאסט', icon: '🎙️', url: 'rapodcast', desc: 'האזנה לתוכן מגוון', category: 'tools' },
+    { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'ניהול זמן יעיל', category: 'tools' },
+    { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'פיתוח ופריסת אתרים', category: 'web' },
+    { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'לעבודה יעילה יותר', category: 'tools' },
+    { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'יצירת דפים אפקטיביים', category: 'web' },
+    { name: 'מחולל פרומפטים', icon: '💡', url: 'prompter', desc: 'יצירת פרומפטים חכמים', category: 'ai' },
+    { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'כלי עזר מתקדם', category: 'tools' },
+    { name: 'שירה', icon: '📝', url: 'shira', desc: 'עולם השירה והפיוט', category: 'tools' },
+    { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: 'כלים וטיפים ל-AI', category: 'ai' },
+    { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'כלי AI מתקדם', category: 'ai' },
+    { name: 'עומר', icon: '📅', url: 'omer', desc: 'ספירת העומר וכלים נלווים', category: 'tools' },
+    { name: 'קולאז׳', icon: '🎨', url: 'col', desc: 'יצירת קולאז׳ים', category: 'tools' },
+    { name: 'אבי', icon: '🛠️', url: 'avi', desc: 'כלי עזר כללי', category: 'tools' },
+    { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: 'כלי עזר מתקדם', category: 'tools' },
+    { name: 'בדיקה', icon: '🧪', url: 'test', desc: 'סביבת בדיקות', category: 'tools' },
+    { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'כלי עזר ייחודי', category: 'tools' },
+    { name: 'LP', icon: '📄', url: 'LP', desc: 'דפי נחיתה מתקדמים', category: 'web' },
+    { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים וחשבונות', category: 'tools' },
+    { name: 'PRM', icon: '👥', url: 'prm', desc: 'ניהול קשרי לקוחות', category: 'tools' },
+    { name: 'HH', icon: '🔑', url: 'hh', desc: 'כלי עזר מיוחד', category: 'tools' },
+    { name: 'אלי', icon: '📱', url: 'eli', desc: 'כלי עזר אישי', category: 'tools' },
+    { name: 'נייד', icon: '📱', url: 'nayad', desc: 'כלים למכשירים ניידים', category: 'tools' },
+    { name: 'GH', icon: '🐙', url: 'gh', desc: 'כלי GitHub', category: 'web' },
+    { name: 'ספי', icon: '📊', url: 'safi', desc: 'כלי עזר ייחודי', category: 'tools' },
+    { name: 'כל היישומים', icon: '🔍', url: 'all', desc: 'גישה לכל היישומים', category: 'tools' },
+    { name: 'חדשות', icon: '📰', url: 'news', desc: 'עדכוני חדשות', category: 'tools' },
+    { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון מתקדם', category: 'tools' },
+    { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון בסיסי', category: 'tools' },
+    { name: 'אחיקם', icon: '👨‍💼', url: 'achikam', desc: 'כלי עזר ייחודי', category: 'tools' },
+    { name: 'ראלי', icon: '🏎️', url: 'rali', desc: 'כלי עזר מיוחד', category: 'tools' }
+] }">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8 text-indigo-800">יישומי לנצ'י - הצגת יכולות</h1>
+        
+        <div class="mb-8 text-center">
+            <button @click="filter = 'all'" :class="{ 'bg-indigo-600 text-white': filter === 'all', 'bg-white text-indigo-600': filter !== 'all' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">הכל</button>
+            <button @click="filter = 'tools'" :class="{ 'bg-indigo-600 text-white': filter === 'tools', 'bg-white text-indigo-600': filter !== 'tools' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">כלים</button>
+            <button @click="filter = 'ai'" :class="{ 'bg-indigo-600 text-white': filter === 'ai', 'bg-white text-indigo-600': filter !== 'ai' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">בינה מלאכותית</button>
+            <button @click="filter = 'web'" :class="{ 'bg-indigo-600 text-white': filter === 'web', 'bg-white text-indigo-600': filter !== 'web' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">פיתוח אתרים</button>
+        </div>
+
+        <div class="app-grid">
+            <template x-for="app in apps" :key="app.name">
+                <a :href="'https://lanchi10.github.io/' + app.url + '/'" class="app-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-all" x-show="filter === 'all' || filter === app.category">
+                    <div class="app-icon" x-text="app.icon"></div>
+                    <h2 class="text-lg font-semibold mb-1 text-gray-800" x-text="app.name"></h2>
+                    <p class="text-sm text-gray-600" x-text="app.desc"></p>
+                </a>
+            </template>
+        </div>
+    </div>
+</body>
+</html>
