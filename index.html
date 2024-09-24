@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>יישומי לנצ'י - הצגת יכולות</title>
+    <title>יישומים שונים - לנצ'י</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
     <style>
@@ -48,7 +48,7 @@
     { name: 'ראלי', icon: '🏎️', url: 'rali', desc: 'כלי עזר מיוחד', category: 'tools' }
 ] }">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8 text-indigo-800">יישומי לנצ'י - הצגת יכולות</h1>
+        <h1 class="text-4xl font-bold text-center mb-8 text-indigo-800">יישומים שונים</h1>
         
         <div class="mb-8 text-center">
             <button @click="filter = 'all'" :class="{ 'bg-indigo-600 text-white': filter === 'all', 'bg-white text-indigo-600': filter !== 'all' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">הכל</button>
@@ -65,6 +65,10 @@
                     <p class="text-sm text-gray-600" x-text="app.desc"></p>
                 </a>
             </template>
+        </div>
+
+        <div class="mt-12 text-center">
+            <img src="logo.jpg" alt="Logo" class="mx-auto" style="width: 100px; height: auto;">
         </div>
     </div>
 </body>
