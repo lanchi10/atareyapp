@@ -15,30 +15,7 @@
         .app-icon { font-size: 2rem; margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen" x-data="{ filter: 'all', apps: [
-    { name: 'פודקאסט', icon: '🎙️', url: 'shirapodcast', desc: 'המחקר של שירה', category: 'tools' },
-    { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'מזג האויר ושעון עולמי', category: 'tools' },
-    { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'אירוח ופריסת אתרים', category: 'web' },
-    { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'קיצורי מקלדת בישומים מובילים', category: 'tools' },
-    { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'לכלי בינה מלאכותית מובילים', category: 'web' },
-    { name: ' טלפרומפטר', icon: '💡', url: 'prompter', desc: 'כלי עזר לקרינות מול מצלמה ', category: 'ai' },
-    { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'מחשבון היוון רמ"י', category: 'tools' },
-    { name: 'שירה', icon: '📝', url: 'shira', desc: 'תקציר עבודת ה דוקטורט', category: 'tools' },
-    { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: יישומי בינה מלאכותית ', category: 'ai' },
-    { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'מנועי חיפוש וכלי בינה', category: 'ai' },
-    { name: 'עומר', icon: '📅', url: 'omer', desc: 'המשחק של עומר', category: 'tools' },
-    { name: 'משחק׳', icon: '🎨', url: 'col', desc: 'משחק לתינוקות ', category: 'tools' },
-    { name: 'אבי', icon: '🛠️', url: 'avi', desc: 'כלי עזר כללי', category: 'tools' },
-    { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: מחשבון היוון', category: 'tools' },
-    { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'הקלדה מדברת, category: 'tools' },
-    { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים והנחות', category: 'tools' },
-    { name: 'PRM', icon: '👥', url: 'prm', desc: 'PROMPT מדריך', category: 'tools' },
-    { name: 'GH', icon: '🐙', url: 'gh', desc: 'הסבר GitHub', category: 'web' },
-    { name: 'כל היישומים', icon: '🔍', url: 'all', desc: 'גישה לכל היישומים', category: 'tools' },
-    { name: 'חדשות', icon: '📰', url: 'news', desc: 'חדשות רדיו פודקסטים', category: 'tools' },
-    { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון הנחות', category: 'tools' },
-    { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון +הסבר', category: 'tools' }
-] }">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen" x-data="{ filter: 'all', apps: [{ name: 'פודקאסט', icon: '🎙️', url: 'shirapodcast', desc: 'המחקר של שירה', category: 'tools' }, { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'מזג האויר ושעון עולמי', category: 'tools' }, { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'אירוח ופריסת אתרים', category: 'web' }, { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'קיצורי מקלדת בישומים מובילים', category: 'tools' }, { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'לכלי בינה מלאכותית מובילים', category: 'web' }, { name: ' טלפרומפטר', icon: '💡', url: 'prompter', desc: 'כלי עזר לקרינות מול מצלמה ', category: 'ai' }, { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'מחשבון היוון רמ\'י', category: 'tools' }, { name: 'שירה', icon: '📝', url: 'shira', desc: 'תקציר עבודת ה דוקטורט', category: 'tools' }, { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: 'יישומי בינה מלאכותית', category: 'ai' }, { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'מנועי חיפוש וכלי בינה', category: 'ai' }, { name: 'עומר', icon: '📅', url: 'omer', desc: 'המשחק של עומר', category: 'tools' }, { name: 'משחק׳', icon: '🎨', url: 'col', desc: 'משחק לתינוקות ', category: 'tools' }, { name: 'אבי', icon: '🛠️', url: 'avi', desc: 'כלי עזר כללי', category: 'tools' }, { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: 'מחשבון היוון', category: 'tools' }, { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'הקלדה מדברת', category: 'tools' }, { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים והנחות', category: 'tools' }, { name: 'PRM', icon: '👥', url: 'prm', desc: 'PROMPT מדריך', category: 'tools' }, { name: 'GH', icon: '🐙', url: 'gh', desc: 'הסבר GitHub', category: 'web' }, { name: 'כל היישומים', icon: '🔍', url: 'all', desc: 'גישה לכל היישומים', category: 'tools' }, { name: 'חדשות', icon: '📰', url: 'news', desc: 'חדשות רדיו פודקסטים', category: 'tools' }, { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון הנחות', category: 'tools' }, { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון +הסבר', category: 'tools' }] }">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold text-center mb-8 text-indigo-800">יישומים שונים</h1>
         
@@ -60,7 +37,7 @@
         </div>
 
         <div class="mt-12 text-center">
-            <img src="logo.jpg" alt="Logo" class="mx-auto" style="width: 100px; height: auto;">
+            <img src="/api/placeholder/100/100" alt="Logo" class="mx-auto" style="width: 100px; height: auto;">
         </div>
     </div>
 </body>
