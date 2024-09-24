@@ -16,28 +16,28 @@
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen" x-data="{ filter: 'all', apps: [
-    { name: 'פודקאסט', icon: '🎙️', url: 'shirapodcast', desc: 'האזנה לתוכן מגוון', category: 'tools' },
-    { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'ניהול זמן יעיל', category: 'tools' },
-    { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'פיתוח ופריסת אתרים', category: 'web' },
-    { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'לעבודה יעילה יותר', category: 'tools' },
-    { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'יצירת דפים אפקטיביים', category: 'web' },
-    { name: 'מחולל פרומפטים', icon: '💡', url: 'prompter', desc: 'יצירת פרומפטים חכמים', category: 'ai' },
-    { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'כלי עזר מתקדם', category: 'tools' },
-    { name: 'שירה', icon: '📝', url: 'shira', desc: 'עולם השירה והפיוט', category: 'tools' },
-    { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: 'כלים וטיפים ל-AI', category: 'ai' },
-    { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'כלי AI מתקדם', category: 'ai' },
-    { name: 'עומר', icon: '📅', url: 'omer', desc: 'ספירת העומר וכלים נלווים', category: 'tools' },
-    { name: 'קולאז׳', icon: '🎨', url: 'col', desc: 'יצירת קולאז׳ים', category: 'tools' },
+    { name: 'פודקאסט', icon: '🎙️', url: 'shirapodcast', desc: 'המחקר של שירה', category: 'tools' },
+    { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'מזג האויר ושעון עולמי', category: 'tools' },
+    { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'אירוח ופריסת אתרים', category: 'web' },
+    { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'קיצורי מקלדת בישומים מובילים', category: 'tools' },
+    { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'לכלי בינה מלאכותית מובילים', category: 'web' },
+    { name: ' טלפרומפטר', icon: '💡', url: 'prompter', desc: 'כלי עזר לקרינות מול מצלמה ', category: 'ai' },
+    { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'מחשבון היוון רמ"י', category: 'tools' },
+    { name: 'שירה', icon: '📝', url: 'shira', desc: 'תקציר עבודת ה דוקטורט', category: 'tools' },
+    { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: יישומי בינה מלאכותית ', category: 'ai' },
+    { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'מנועי חיפוש וכלי בינה', category: 'ai' },
+    { name: 'עומר', icon: '📅', url: 'omer', desc: 'המשחק של עומר', category: 'tools' },
+    { name: 'משחק׳', icon: '🎨', url: 'col', desc: 'משחק לתינוקות ', category: 'tools' },
     { name: 'אבי', icon: '🛠️', url: 'avi', desc: 'כלי עזר כללי', category: 'tools' },
-    { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: 'כלי עזר מתקדם', category: 'tools' },
-    { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'כלי עזר ייחודי', category: 'tools' },
-    { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים וחשבונות', category: 'tools' },
-    { name: 'PRM', icon: '👥', url: 'prm', desc: 'ניהול קשרי לקוחות', category: 'tools' },
-    { name: 'GH', icon: '🐙', url: 'gh', desc: 'כלי GitHub', category: 'web' },
+    { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: מחשבון היוון', category: 'tools' },
+    { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'הקלדה מדברת, category: 'tools' },
+    { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים והנחות', category: 'tools' },
+    { name: 'PRM', icon: '👥', url: 'prm', desc: 'PROMPT מדריך', category: 'tools' },
+    { name: 'GH', icon: '🐙', url: 'gh', desc: 'הסבר GitHub', category: 'web' },
     { name: 'כל היישומים', icon: '🔍', url: 'all', desc: 'גישה לכל היישומים', category: 'tools' },
-    { name: 'חדשות', icon: '📰', url: 'news', desc: 'עדכוני חדשות', category: 'tools' },
-    { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון מתקדם', category: 'tools' },
-    { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון בסיסי', category: 'tools' }
+    { name: 'חדשות', icon: '📰', url: 'news', desc: 'חדשות רדיו פודקסטים', category: 'tools' },
+    { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון הנחות', category: 'tools' },
+    { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון +הסבר', category: 'tools' }
 ] }">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold text-center mb-8 text-indigo-800">יישומים שונים</h1>
