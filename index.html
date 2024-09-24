@@ -9,35 +9,41 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
         body { font-family: 'Heebo', sans-serif; }
-        .app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+        .app-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
         .app-item { transition: all 0.3s ease; }
         .app-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .app-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        @media (max-width: 640px) {
+            .app-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+            .filter-buttons { display: flex; flex-wrap: wrap; justify-content: center; }
+            .filter-buttons button { margin: 0.25rem; }
+        }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen" x-data="{ filter: 'all', apps: [{ name: 'פודקאסט', icon: '🎙️', url: 'shirapodcast', desc: 'המחקר של שירה', category: 'tools' }, { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'מזג האויר ושעון עולמי', category: 'tools' }, { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'אירוח ופריסת אתרים', category: 'web' }, { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'קיצורי מקלדת בישומים מובילים', category: 'tools' }, { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'לכלי בינה מלאכותית מובילים', category: 'web' }, { name: ' טלפרומפטר', icon: '💡', url: 'prompter', desc: 'כלי עזר לקרינות מול מצלמה ', category: 'ai' }, { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'מחשבון היוון רמ\'י', category: 'tools' }, { name: 'שירה', icon: '📝', url: 'shira', desc: 'תקציר עבודת ה דוקטורט', category: 'tools' }, { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: 'יישומי בינה מלאכותית', category: 'ai' }, { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'מנועי חיפוש וכלי בינה', category: 'ai' }, { name: 'עומר', icon: '📅', url: 'omer', desc: 'המשחק של עומר', category: 'tools' }, { name: 'משחק׳', icon: '🎨', url: 'col', desc: 'משחק לתינוקות ', category: 'tools' }, { name: 'אבי', icon: '🛠️', url: 'avi', desc: 'כלי עזר כללי', category: 'tools' }, { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: 'מחשבון היוון', category: 'tools' }, { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'הקלדה מדברת', category: 'tools' }, { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים והנחות', category: 'tools' }, { name: 'PRM', icon: '👥', url: 'prm', desc: 'PROMPT מדריך', category: 'tools' }, { name: 'GH', icon: '🐙', url: 'gh', desc: 'הסבר GitHub', category: 'web' }, { name: 'כל היישומים', icon: '🔍', url: 'all', desc: 'גישה לכל היישומים', category: 'tools' }, { name: 'חדשות', icon: '📰', url: 'news', desc: 'חדשות רדיו פודקסטים', category: 'tools' }, { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון הנחות', category: 'tools' }, { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון +הסבר', category: 'tools' }] }">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen" x-data="{ filter: 'all', apps: [{ name: 'פודקאסט', icon: '🎙️', url: 'shirapodcast', desc: 'המחקר של שירה', category: 'tools' }, { name: 'לוח זמנים', icon: '⏰', url: 'times', desc: 'מזג האויר ושעון עולמי', category: 'tools' }, { name: 'Netlify', icon: '🌐', url: 'Netlify', desc: 'אירוח ופריסת אתרים', category: 'web' }, { name: 'קיצורי דרך', icon: '⚡', url: 'shortcut-hub', desc: 'קיצורי מקלדת בישומים מובילים', category: 'tools' }, { name: 'דף נחיתה', icon: '🚀', url: 'landing', desc: 'לכלי בינה מלאכותית מובילים', category: 'web' }, { name: ' טלפרומפטר', icon: '💡', url: 'prompter', desc: 'כלי עזר לקרינות מול מצלמה ', category: 'ai' }, { name: 'אבי 2', icon: '🔧', url: 'avi2', desc: 'מחשבון היוון רמ\'י', category: 'tools' }, { name: 'שירה', icon: '📝', url: 'shira', desc: 'תקציר עבודת ה דוקטורט', category: 'tools' }, { name: 'בינה מלאכותית', icon: '🤖', url: 'ai', desc: 'יישומי בינה מלאכותית', category: 'ai' }, { name: 'AI1', icon: '🧠', url: 'AI1', desc: 'מנועי חיפוש וכלי בינה', category: 'ai' }, { name: 'עומר', icon: '📅', url: 'omer', desc: 'המשחק של עומר', category: 'tools' }, { name: 'משחק׳', icon: '🎨', url: 'col', desc: 'משחק לתינוקות ', category: 'tools' }, { name: 'אבי', icon: '🛠️', url: 'avi', desc: 'כלי עזר כללי', category: 'tools' }, { name: 'אבי 1', icon: '🔨', url: 'avi1', desc: 'מחשבון היוון', category: 'tools' }, { name: 'גגי', icon: '🏗️', url: 'gagi', desc: 'הקלדה מדברת', category: 'tools' }, { name: 'מחשבון חיובים', icon: '💰', url: 'calchiv', desc: 'חישוב חיובים והנחות', category: 'tools' }, { name: 'PRM', icon: '👥', url: 'prm', desc: 'PROMPT מדריך', category: 'tools' }, { name: 'GH', icon: '🐙', url: 'gh', desc: 'הסבר GitHub', category: 'web' }, { name: 'כל היישומים', icon: '🔍', url: 'all', desc: 'גישה לכל היישומים', category: 'tools' }, { name: 'חדשות', icon: '📰', url: 'news', desc: 'חדשות רדיו פודקסטים', category: 'tools' }, { name: 'מחשבון 2', icon: '🧮', url: 'calc2', desc: 'מחשבון הנחות', category: 'tools' }, { name: 'מחשבון', icon: '🔢', url: 'calc', desc: 'מחשבון +הסבר', category: 'tools' }, { name: 'רדיו וTV ישראלים', icon: '📻', url: 'https://radiohazak.netlify.app/', desc: 'ערוצי רדיו וטלוויזיה ישראליים', category: 'media' }, { name: 'מזג אוויר ל-5 ימים', icon: '🌤️', url: 'https://5dayswether.netlify.app/', desc: 'תחזית מזג אוויר לחמישה ימים', category: 'weather' }] }">
     <div class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8 text-indigo-800">יישומים שונים</h1>
+        <div class="flex justify-center items-center mb-8">
+            <img src="logo.jpg" alt="Logo" class="w-16 h-16 mr-4">
+            <h1 class="text-3xl sm:text-4xl font-bold text-center text-indigo-800">יישומים שונים</h1>
+        </div>
         
-        <div class="mb-8 text-center">
-            <button @click="filter = 'all'" :class="{ 'bg-indigo-600 text-white': filter === 'all', 'bg-white text-indigo-600': filter !== 'all' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">הכל</button>
-            <button @click="filter = 'tools'" :class="{ 'bg-indigo-600 text-white': filter === 'tools', 'bg-white text-indigo-600': filter !== 'tools' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">כלים</button>
-            <button @click="filter = 'ai'" :class="{ 'bg-indigo-600 text-white': filter === 'ai', 'bg-white text-indigo-600': filter !== 'ai' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">בינה מלאכותית</button>
-            <button @click="filter = 'web'" :class="{ 'bg-indigo-600 text-white': filter === 'web', 'bg-white text-indigo-600': filter !== 'web' }" class="px-4 py-2 rounded-md mr-2 mb-2 transition-colors duration-200">פיתוח אתרים</button>
+        <div class="filter-buttons mb-8 text-center">
+            <button @click="filter = 'all'" :class="{ 'bg-indigo-600 text-white': filter === 'all', 'bg-white text-indigo-600': filter !== 'all' }" class="px-3 py-1 rounded-md text-sm sm:text-base transition-colors duration-200">הכל</button>
+            <button @click="filter = 'tools'" :class="{ 'bg-indigo-600 text-white': filter === 'tools', 'bg-white text-indigo-600': filter !== 'tools' }" class="px-3 py-1 rounded-md text-sm sm:text-base transition-colors duration-200">כלים</button>
+            <button @click="filter = 'ai'" :class="{ 'bg-indigo-600 text-white': filter === 'ai', 'bg-white text-indigo-600': filter !== 'ai' }" class="px-3 py-1 rounded-md text-sm sm:text-base transition-colors duration-200">בינה מלאכותית</button>
+            <button @click="filter = 'web'" :class="{ 'bg-indigo-600 text-white': filter === 'web', 'bg-white text-indigo-600': filter !== 'web' }" class="px-3 py-1 rounded-md text-sm sm:text-base transition-colors duration-200">פיתוח אתרים</button>
+            <button @click="filter = 'media'" :class="{ 'bg-indigo-600 text-white': filter === 'media', 'bg-white text-indigo-600': filter !== 'media' }" class="px-3 py-1 rounded-md text-sm sm:text-base transition-colors duration-200">מדיה</button>
+            <button @click="filter = 'weather'" :class="{ 'bg-indigo-600 text-white': filter === 'weather', 'bg-white text-indigo-600': filter !== 'weather' }" class="px-3 py-1 rounded-md text-sm sm:text-base transition-colors duration-200">מזג אוויר</button>
         </div>
 
         <div class="app-grid">
             <template x-for="app in apps" :key="app.name">
-                <a :href="'https://lanchi10.github.io/' + app.url + '/'" class="app-item bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-all" x-show="filter === 'all' || filter === app.category">
+                <a :href="app.url" class="app-item bg-white p-3 sm:p-4 rounded-lg shadow-md hover:shadow-xl transition-all" x-show="filter === 'all' || filter === app.category">
                     <div class="app-icon" x-text="app.icon"></div>
-                    <h2 class="text-lg font-semibold mb-1 text-gray-800" x-text="app.name"></h2>
-                    <p class="text-sm text-gray-600" x-text="app.desc"></p>
+                    <h2 class="text-base sm:text-lg font-semibold mb-1 text-gray-800" x-text="app.name"></h2>
+                    <p class="text-xs sm:text-sm text-gray-600" x-text="app.desc"></p>
                 </a>
             </template>
-        </div>
-
-        <div class="mt-12 text-center">
-            <img src="/api/placeholder/100/100" alt="Logo" class="mx-auto" style="width: 100px; height: auto;">
         </div>
     </div>
 </body>
